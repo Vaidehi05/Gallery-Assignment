@@ -51,7 +51,7 @@ app.get('/gallery', function (req, res) {
 app.get('/gallery/:id', function (req, res,next) {
     for (x of gallery) {
         if(`${req.params.id}` == x.id) {
-            res.render("galleryid", {title: `${req.params.id}`})
+            res.render("idofgallery", {title: `${req.params.id}`})
         return;
     }}
     next();
