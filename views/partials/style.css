@@ -18,7 +18,6 @@ body {
   line-height: 1.5;
   text-align: center;
   position: relative;
-
 }
 
 .clearfix:after {
@@ -92,18 +91,22 @@ body {
 img {
   width: 100%;
 }
-figure{
+
+figure {
   margin-top: 180px;
   padding: 10px;
   display: inline-block;
 }
-figcaption{
+
+figcaption {
   text-align: center;
 }
+
 .color {
   text-decoration: none;
-  color:orange;
+  color: orange;
 }
+
 h1,
 h2,
 h5 {

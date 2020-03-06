@@ -9,7 +9,7 @@ const app = express();
 
 app.use(function (req, res, next) {
     res.locals.year = moment().format('YYYY')
-    res.locals.gallery=gallery;
+    res.locals.gallery = gallery;
     next();
 });
 
@@ -48,12 +48,15 @@ app.get('/gallery', function (req, res) {
         title: 'Gallery'
     });
 });
-app.get('/gallery/:id', function (req, res,next) {
+app.get('/gallery/:id', function (req, res, next) {
     for (x of gallery) {
-        if(`${req.params.id}` == x.id) {
-            res.render("idofgallery", {title: `${req.params.id}`})
-        return;
-    }}
+        if (`${req.params.id}` == x.id) {
+            res.render("idofgallery", {
+                title: `${req.params.id}`
+            })
+            return;
+        }
+    }
     next();
 });
 app.use(express.static(path.join(__dirname, 'public')));
