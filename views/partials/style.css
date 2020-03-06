@@ -100,7 +100,10 @@ figure{
 figcaption{
   text-align: center;
 }
-
+.color {
+  text-decoration: none;
+  color:orange;
+}
 h1,
 h2,
 h5 {
