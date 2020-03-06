@@ -1,0 +1,29 @@
+{
+  "name": "ejs-assignment",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaidehi05/Express-Assignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vaidehi05/Express-Assignment/issues"
+  },
+  "homepage": "https://github.com/Vaidehi05/Express-Assignment#readme"
+}
