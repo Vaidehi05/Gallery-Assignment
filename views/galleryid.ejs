@@ -1,9 +1,12 @@
 <%- include('partials/header') %>
-  <% for(x of gallery) {
-    if(x.id == title) {  %>
-  <figure>
-    <img src= "/images/lrg/<%= x.fileName %>" alt ="<%= x.title %>" ></a>
-    <figcaption><%= x.title %> <a href=" <%= x.attribution.url %>"><%=x.attribution.credit %></a><%=x.attribution.source %></figcaption>
+  <% 
+  for(x of gallery) {
+  if(x.id == title){ %>
+    <figure>
+    
+    <a href="/gallery/<%= x.id %>">
+    <img src= "/images/sm/<%= x.fileName %>" alt ="<% x.title %>" ></a>
+    <figcaption><%= x.title %> <%=x.attribution.credit %></figcaption>
   </figure>
-<% } %>
+<%} } %>
 <%- include('partials/footer') %>
