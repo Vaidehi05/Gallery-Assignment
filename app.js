@@ -2,12 +2,14 @@ const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
 const moment = require('moment');
+const gallery = require('./gallery');
 
 
 const app = express();
 
 app.use(function (req, res, next) {
     res.locals.year = moment().format('YYYY')
+    res.locals.gallery=gallery;
     next();
 });
 
@@ -41,7 +43,19 @@ app.get('/about', function (req, res) {
         title: 'About'
     });
 });
-
+app.get('/gallery', function (req, res) {
+    res.render("gallery", {
+        title: 'Gallery'
+    });
+});
+app.get('/gallery/:id', function (req, res,next) {
+    for (x of gallery) {
+        if(`${req.params.id}` == x.id) {
+            res.render("galleryid", {title: `${req.params.id}`})
+        return;
+    }}
+    next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {

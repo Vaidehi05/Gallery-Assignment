@@ -90,10 +90,15 @@ body {
 }
 
 img {
-  display: block;
   width: 100%;
-  object-fit: cover;
-  object-position: center center;
+}
+figure{
+  margin-top: 150px;
+  padding: 30px;
+  display: inline-block;
+}
+figcaption{
+  text-align: center;
 }
 
 h1,
